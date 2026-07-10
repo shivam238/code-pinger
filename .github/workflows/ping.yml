@@ -1,0 +1,15 @@
+name: Ping Replit
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping URL
+        run: |
+          curl -L "https://df9b3cfc-63c7-44e9-9d01-d578b3edf36b-00-3povtv8b6u5ki.sisko.replit.dev/ping"
